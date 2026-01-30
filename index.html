@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week 2: Research Design in System Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0b5ed7;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #084298;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav button {
+            background: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        nav button:hover {
+            background: #e0e0e0;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+
+        section.active {
+            display: block;
+        }
+        .section:hover .box,
+        .section:focus-within .box {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+        }
+        
+
+        h2 {
+            color: #0b5ed7;
+        }
+        h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin: 20px 0 10px;
+            line-height: 1.4;
+            }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        footer {
+            background: #0b5ed7;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .framework {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.box {
+    background: #ffffff;
+    border: 2px solid #0B5ED7;
+    border-radius: 10px;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.box, .moderator {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Independent Variable Hover */
+.box.iv:hover {
+    background-color: #e3f2fd;
+    border-color: #0d6efd;
+    transform: translateY(-5px);
+}
+
+/* Mediating Variable Hover */
+.box.mediator:hover {
+    background-color: #e8f5e9;
+    border-color: #198754;
+    transform: translateY(-5px);
+}
+
+/* Dependent Variable Hover */
+.box.dv:hover {
+    background-color: #fff3cd;
+    border-color: #ffc107;
+    transform: translateY(-5px);
+}
+
+/* Moderator Hover */
+.moderator:hover {
+    background-color: #f8d7da;
+    border-color: #dc3545;
+    transform: scale(1.02);
+}
+.arrow {
+    font-size: 28px;
+    color: #0B5ED7;
+}
+
+.moderator {
+    margin-top: 30px;
+    text-align: center;
+    background: #e7f1ff;
+    border: 2px dashed #084298;
+    padding: 15px;
+    border-radius: 10px;
+}
+.submission {
+    border: 2px dashed #2c3e50;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+}
+.down-arrow {
+    font-size: 24px;
+    color: #084298;
+}
+
+.note {
+    font-size: 14px;
+    color: #6C757D;
+}
+table {
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: #ffffff;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            vertical-align: top;
+        }
+        th {
+            background-color: #2c3e50;
+            color: #ffffff;
+            text-align: center;
+        }
+        td:first-child {
+            font-weight: bold;
+            width: 18%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Week 2: Research Design in System Development</h1>
+    <p>Understanding Research Designs and Development Methodologies</p>
+</header>
+
+<nav>
+    <button onclick="showSection('overview')">Overview</button>
+    <button onclick="showSection('designs')">Research Design</button>
+    <button onclick="showSection('methodologies')">Research Methodology</button>
+    <button onclick="showSection('sdg')">System Development Research</button>
+    <button onclick="showSection('assessment')">Assessment</button>
+    
+</nav>
+
+<section id="overview" class="active">
+    <h2>Week Overview</h2>
+    <p>
+        This week introduces research designs commonly used in system development and explains how to select appropriate research and development methodologies for software and hardware projects. Emphasis is placed on experimental, quasi-experimental, and non-experimental designs, as well as system development methodologies such as Waterfall, Agile, DevOps, and hardware-oriented models.
+        <br>
+        <b> Learning Objectives: </b>
+            <ul>
+            <li><strong>LO1:</strong> Understanding the principles of experimental design in system development.</li>
+            <li><strong>LO2:</strong> Identifying the differences between experimental and quasi-experimental designs.</li>
+            <li><strong>LO3:</strong> Learning about non-experimental research designs, such as descriptive and correlational research.</li>
+            <li><strong>LO4:</strong> Discussing various software and system development methodologies, such as Agile, Waterfall, and DevOps.</li>
+            <li><strong>LO5:</strong> Identifying the appropriate research design and methodology for your study in system development.</li>
+            </ul>
+
+    </p>
+</section>
+
+<section id="designs">
+    <h2>Research Designs</h2>
+    <p>It is the Overall Plan/ Blueprint of the Study. It outlines the HOW the research will be conducted and it answer the Reesearch Questions and test Hypotheses.</p>
+       <h3> <strong>1. Experimental Design</strong> </h3>Uses randomization, control groups, and manipulation of variables.
+        
+        <p>
+            Experimental design is an important research method in system development that involves manipulating one or more independent variables to measure the effect on a dependent variable. 
+            </p>
+                    <strong>Principles of Experimental Design</strong>
+                    <ul>
+                    <li><strong>Randomization:</strong> Random assignment of subjects or test units to groups to reduce bias.</li>
+                    <li><strong>Control Groups:</strong> Comparison groups that do not receive the intervention.</li>
+                    <li><strong>Replication:</strong> Repeating experiments to ensure reliability and generalizability.</li>
+                    <li><strong>Systematic Variation</strong> Controlled variation of conditions to study variable effects.</li>
+                    <li><strong>Blocking:</strong> Grouping similar subjects before randomization to control extraneous variables.</li>
+                    </ul>
+        
+        <h3><strong>2. Quasi-Experimental Design</strong></h3> Lacks random assignment but allows comparison.
+        
+         <p>
+            Quasi-experimental designs resemble experimental designs but lack random assignment. They are suitable when randomization is impractical or unethical.
+            </p>
+                    <strong>Common Quasi-Experimental Designs</strong>
+                    <ul>
+                    <li><strong>Non-Equivalent Control Group Design</strong> Random assignment of subjects or test units to groups to reduce bias.</li>
+                    <li><strong>One-Group Pretest/Posttest Design</strong> Comparison groups that do not receive the intervention.</li>
+                    </ul>
+                    
+                    <strong>Strengths and Limitations</strong>
+                    <ul>
+                    <li><strong>Advantages:</strong> Practical, feasible in real-world settings.</li>
+                    <li><strong>Limitations:</strong> Reduced control, potential selection bias, weaker causal inference.</li>
+                    </ul>
+                                
+        <h3><strong>3. Non-Experimental Design</strong></h3> Includes descriptive, correlational, survey, and case study research.</li>
+                    <p>
+            Non-experimental designs focus on observation and description rather than manipulation.
+            </p>
+
+            <strong>Types</strong>
+                <ul>
+                    <li><strong>Descriptive Research:</strong> Describes characteristics of systems or users.</li>
+                    <li><strong>Correlational Research:</strong> Examines relationships between variables.</li>
+                    <li><strong>Case Study:</strong> In-depth analysis of a single system or context.</li>
+                    <li><strong>Survey Research</strong> Collects data from large populations using questionnaires.
+
+                    </li>
+                </ul>
+
+
+                <h3><strong>4. Developemental / Design Research</strong></h3> To design, develop, and test a developed system or application.</li>
+                    <p> It focuses on creating or improving a product, system, or prototype.</p>
+
+            <strong>Types</strong>
+                <ul>
+                    <li><strong>Descriptive Research:</strong> Describes characteristics of systems or users.</li>
+                    <li><strong>Correlational Research:</strong> Examines relationships between variables.</li>
+                    <li><strong>Case Study:</strong> In-depth analysis of a single system or context.</li>
+                    <li><strong>Survey Research</strong> Collects data from large populations using questionnaires.                 </li>
+                </ul>
+
+
+                <table>
+    <center><h2>Types of Research with designated Research Design</h2></center>
+    <thead>
+        <tr>
+            <th>Type of Research</th>
+            <th>Purpose</th>
+            <th>Possible Research Design</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Developmental / R&D</td>
+            <td>Design and build a new system, prototype, or device</td>
+            <td>Design & Build Research, Prototype Development, Iterative Evaluation</td>
+        </tr>
+        <tr>
+            <td>Experimental</td>
+            <td>Test cause-effect relationships under controlled conditions</td>
+            <td>Quasi-experimental, Pre-test/Post-test, Controlled Experiment</td>
+        </tr>
+        <tr>
+            <td>Descriptive</td>
+            <td>Describe characteristics, usage patterns, or phenomena</td>
+            <td>Survey, Observational Study, Cross-sectional Study</td>
+        </tr>
+        <tr>
+            <td>Correlational / Analytical</td>
+            <td>Analyze relationships between variables</td>
+            <td>Correlation Analysis, Regression Analysis, Statistical Modeling</td>
+        </tr>
+        <tr>
+            <td>Case Study</td>
+            <td>In-depth study of a single system, environment, or scenario</td>
+            <td>Single-case Study, Multiple-case Study</td>
+        </tr>
+    </tbody>
+</table>
+</section>
+
+<section id="methodologies">
+   <h2> Research Methodology</h2>
+    <p>It is a Systematic Procedures/ Techniques & Tools to carry out the research.</p>
+    <ul>
+        <li><strong><a href="https://th.bing.com/th/id/R.73bfbdbc31e13b9f65314f793db8da46?rik=2MP%2f9EhWrT7NDg&riu=http%3a%2f%2f1.bp.blogspot.com%2f-gxj9EEmaKCc%2fUXfs6d3D2ZI%2fAAAAAAAAAzI%2fdRepueNwWK0%2fs1600%2fwaterfall-model-sdlc1.jpg&ehk=0IJ9Hui0IiMpnyWSxSirn9U0ECiRLT3CEu1fMei7t2s%3d&risl=&pid=ImgRaw&r=0">Waterfall:</a></strong> Sequential and structured</li>
+        <p>This approach involves a sequential process where each phase of the development process is completed before moving onto the next one. The Waterfall model is useful for projects where the requirements are well-defined and the design is stable.</p>
+        
+        
+        
+        <li><strong><a href="https://assets.asana.biz/transform/f3519623-44e4-4506-8e1f-38cb74819c58/inline-agile-agile-methodology-1-2x">Agile:</a></strong> Iterative, flexible, and collaborative</li>
+        <p>Agile methodology is an approach to software development that emphasizes collaboration, flexibility, and customer satisfaction. This methodology involves breaking the software development process into small, manageable chunks called sprints, which are completed in short cycles. Each sprint involves a planning meeting, daily stand-up meetings, development work, and a review and retrospective meeting.</p>
+        
+      
+
+        <li><strong><a href="https://www.intellectsoft.net/blog/wp-content/uploads/spiral-model-process-1024x844.jpg">Spiral Model:</a></strong> Risk-driven and test-focused</li>
+        <p>The spiral methodology is a risk-driven software development model that emphasizes flexibility and adaptability. It is an iterative process that involves multiple cycles of planning, designing, building, and evaluating the software. The spiral model is particularly suitable for large and complex hardware development projects where the requirements and objectives are not well understood, and the risks associated with the project are high.</p>
+
+
+        <li><strong><a href="https://kruschecompany.com/wp-content/uploads/2021/09/V-model-for-software-development-infographic-diagram.png">V Model:</a></strong> Testing and Verification Driven</li>
+        <p>The V-model methodology is a modified version of the traditional Waterfall model. It is an extension of the Waterfall model that emphasizes the importance of testing and verification at each stage of development. The V-model is a useful methodology for hardware development projects where testing and verification are critical.</p>
+
+
+
+        <li><strong><a href="https://kissflow.com/hs-fs/hubfs/Rapid-application-development.png?width=850&height=450&name=Rapid-application-development.png">Rapid Application Development (RAD):</a></strong> Rapid prototyping with user feedback</li>
+        <p>This approach involves developing prototypes of the hardware quickly and iteratively, with an emphasis on user feedback and involvement.</p>
+    </ul>
+</section>
+
+
+<section id="sdg">
+    <h2>Types of Variables</h2>
+    <p>In system development research—especially in IoT and SDG-related studies—different types of variables are used to explain relationships and impacts.</p>
+    <ul>
+        <li><strong>Independent Variable:</strong> The independent variable is the factor that the researcher intentionally introduces or controls to observe its effect.</li>
+        <p>Example: Implementation of energy-efficient IoT devices in a smart city.</p>
+        <li><strong>Dependent Variable:</strong> The dependent variable is the outcome that is measured and is expected to change due to the independent variable.</li>
+        <p>Example: Reduction in greenhouse gas emissions</p>
+        <li><strong>Moderating Variable:</strong> A moderating variable influences the strength or direction of the relationship between the independent and dependent variables.</li>
+        <p>Example: Level of government support or incentives</p>
+        <li><strong>Mediating Variable:</strong> A mediating variable explains how or why the independent variable affects the dependent variable.</li>
+        <p>Example: Decrease in energy consumption by IoT devices</p>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+    <center><h2>Conceptual Framework</h2></center>
+
+    <div class="framework">
+
+        <div class="box iv">
+            <strong>Independent Variable</strong>
+            <p>Implementation of Energy-Efficient IoT Devices</p>
+        </div>
+
+        <div class="arrow">➜</div>
+
+        <div class="box mediator">
+            <strong>Mediating Variable</strong>
+            <p>Decrease in Energy Consumption</p>
+        </div>
+
+        <div class="arrow">➜</div>
+
+        <div class="box dv">
+            <strong>Dependent Variable</strong>
+            <p>Reduction in Greenhouse Gas Emissions</p>
+        </div>
+
+    </div>
+
+    <div class="moderator">
+        <strong>Moderating Variable</strong>
+        <p>Level of Government Support or Incentives</p>
+        <div class="down-arrow">⬇</div>
+        <p class="note">Influences the strength of the relationship</p>
+    </div>
+
+<p><i>In summary, the example provided illustrates how the implementation of energy-efficient IoT devices (independent variable) can lead to a reduction in greenhouse gas emissions (dependent variable). The relationship between these variables might be affected by the level of government support or incentives (moderating variable) and can be explained through the decrease in energy consumption by IoT devices (mediating variable).</p></i>
+
+
+
+
+
+
+
+
+
+
+</section>
+
+
+<section id="assessment">
+    <h2>Assessment</h2>
+   
+
+    <h3><strong>Group Activity</strong></h3>
+        <p>Work in groups. Choose one proposed thesis title and complete all sections below. Be ready to present your output next meeting.</p>
+    <ul>
+        <li><b>Thesis Title</b> Provide the title of your proposed thesis.</li>
+        <li><b>Research Questions</b> Formulate 2–3 clear research questions based on the title.</li>
+        <li><b>Type of Research</b> To identify the appropriate research type for your study, you need to take into consideration.</li>
+        <li><b>Conceptual Framework</b> Identify the Independent Variable(s), Dependent Variable(s), (Optional) Mediator / Moderator / Control Variables</li>
+        <br>Draw a simple diagram showing the relationship among variables.<br>
+        <li><b>Research Design</b> State the research design (e.g., descriptive, correlational, experimental, qualitative, mixed methods) and give a 1–2 sentence justification.</li>
+        <li><b>Research Methodology</b> State the Researh methodology. Briefly describe the Participants / Respondents, Sampling technique, Data collection instrument, Data analysis method</li>
+    </ul>
+
+
+<h2>Rubrics</h2>
+
+
+    <p><strong>Group Activity (50 points):</strong></p>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Criteria (20 pts each)</th>
+            <th>Excellent (20)</th>
+            <th>Good (15)</th>
+            <th>Fair (10)</th>
+            <th>Poor (5)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Thesis Title</td>
+            <td>Clear, focused, researchable, and precisely aligned with variables</td>
+            <td>Clear but needs minor refinement</td>
+            <td>Too broad or partially unclear</td>
+            <td>Not researchable or unrelated</td>
+        </tr>
+        <tr>
+            <td>Research Questions</td>
+            <td>Well-aligned with title; clear, measurable, and specific</td>
+            <td>Generally aligned with minor wording issues</td>
+            <td>Weak alignment or vague questions</td>
+            <td>Unclear or not aligned with the title</td>
+        </tr>
+        <tr>
+            <td>Conceptual Framework</td>
+            <td>All variables correctly identified and logically connected</td>
+            <td>Variables identified with minor gaps</td>
+            <td>Incomplete or unclear relationships</td>
+            <td>Missing or incorrect framework</td>
+        </tr>
+        <tr>
+            <td>Research Design</td>
+            <td>Appropriate design clearly justified and aligned with study</td>
+            <td>Appropriate design with weak justification</td>
+            <td>Partially appropriate design</td>
+            <td>Incorrect or missing design</td>
+        </tr>
+        <tr>
+            <td>Research Methodology</td>
+            <td>Clear, feasible, and fully aligned (participants, tools, analysis)</td>
+            <td>Mostly clear with minor inconsistencies</td>
+            <td>Lacks clarity or alignment</td>
+            <td>Incomplete or incorrect methodology</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+    
+    <br>
+    Total: 100 points
+
+
+<div class="submission">
+    <h2 style="margin-top: 0; color: #2c3e50;">
+        Submission Link
+    </h2>
+
+    <p>
+       <strong>Google Form</strong> 
+        Submit your Answers <strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSeN10QYPIeiEVQ-Ab1IRGCJVpvztuLDRBW20dyH_Ov0QBWyDQ/viewform?usp=dialog">here</a></strong>.
+    </p>
+
+  
+</div>
+
+
+
+
+
+</section>
+
+<footer>
+    <p>&copy; 2026 | BCA198 Research Methodology | Asst. Prof. Phoebe Ruth Alithea B. Sudaria, MSc. </p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll("section");
+        sections.forEach(section => {
+            section.classList.remove("active");
+        });
+        document.getElementById(sectionId).classList.add("active");
+    }
+</script>
+
+</body>
+</html>
